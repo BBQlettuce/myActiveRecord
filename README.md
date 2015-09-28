@@ -2,7 +2,7 @@
 ORM inspired by the functionality of Active Record
 
 ## SQLObject class
-- represents the traditional Model
+- represents the traditional Model of the Rails MVC framework
 - inflector gem handles pluralization and constantization
 - makes use of SQL statements to execute CRUD actions
 - create, read, update actions all supported (delete to be implemented)
@@ -19,4 +19,5 @@ ORM inspired by the functionality of Active Record
   - compose join query using previously written methods
 
 ## Todos
-- has_many_through
+- SQLObject#destroy
+- Associatable#has_many_through
