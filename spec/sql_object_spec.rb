@@ -163,4 +163,12 @@ describe SQLObject do
       human.save
     end
   end
+
+  describe '#destroy' do
+    it '#destroy deletes entry from model table' do
+      cat = Cat.find(5);
+      cat.destroy
+      expect(Cat.find(5)).to eq(nil)
+    end
+  end
 end

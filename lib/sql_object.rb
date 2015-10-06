@@ -109,4 +109,14 @@ class SQLObject
   def save
     id.nil? ? insert : update
   end
+
+  def destroy
+    query = (<<-SQL)
+      DELETE FROM
+        #{self.class.table_name}
+      WHERE
+        id = #{id}
+    SQL
+    DBConnection.execute(query)
+  end
 end
