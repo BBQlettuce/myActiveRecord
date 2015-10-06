@@ -2,6 +2,8 @@
 ORM inspired by the functionality of Active Record
 
 ## SQLObject class
+- usage: have your desired Model class inherit from SQLObject, then call
+self.finalize!
 - represents the traditional Model of the Rails MVC framework
 - inflector gem handles pluralization and constantization
 - makes use of SQL statements to execute CRUD actions

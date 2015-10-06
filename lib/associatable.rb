@@ -55,6 +55,7 @@ module Associatable
 
   def has_many(name, options = {})
     has_many_options = HasManyOptions.new(name, self.name, options)
+    assoc_options[name] = has_many_options
     define_method(name) do
       mc = has_many_options.model_class
       owner_key = self.send(has_many_options.primary_key)
