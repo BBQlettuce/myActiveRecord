@@ -7,7 +7,7 @@ self.finalize!
 - represents the traditional Model of the Rails MVC framework
 - inflector gem handles pluralization and constantization
 - makes use of SQL statements to execute CRUD actions
-- create, read, update actions all supported (delete to be implemented)
+  - create, read, update, delete actions all supported
 
 ### Searchable
 - extends SQLobject class to accept `where` style filtering
@@ -16,10 +16,10 @@ self.finalize!
 - extends SQLobject class to support ORM associations
 - supports belongs_to and has_many associations
 - makes us of `where` method to perform an abstracted SQL query
-- has_one_through:
-  - toughest method to write!
+- has_one_through + has_many_through
   - compose join query using previously written methods
+  - uses assoc_options hash to determin correct join attributes
 
 ## Todos
-- SQLObject#destroy
-- Associatable#has_many_through
+- [x] SQLObject#destroy
+- [x] Associatable#has_many_through
